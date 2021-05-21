@@ -4,8 +4,10 @@ Sphinx Code Highlighter Directive
 A Sphinx directive that works just like a code-block plus allows you to
 highlight partial lines.
 
-Example
--------
+Examples
+--------
+
+Using [MyST markdown](https://myst-parser.readthedocs.io/en/latest/using/syntax.html):
 
 `````markdown
 
@@ -31,4 +33,4 @@ while i < len(!!!dwarves!!!):
 
 `````
 
-![demo](docs/img/demo.png)
+![screenshot](docs/img/alabaster-demo.png)
