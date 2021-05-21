@@ -1371,6 +1371,21 @@ testing = ["pytest (>=6.0.1,<6.1.0)", "pytest-regressions (>=2.0.1,<2.1.0)"]
 themes = ["sphinx-rtd-theme", "pydata-sphinx-theme (>=0.4.0,<0.5.0)", "sphinx-book-theme (>=0.0.36,<0.1.0)", "myst-parser (>=0.12.9,<0.13.0)"]
 
 [[package]]
+name = "sphinx-rtd-theme"
+version = "0.5.2"
+description = "Read the Docs theme for Sphinx"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+docutils = "<0.17"
+sphinx = "*"
+
+[package.extras]
+dev = ["transifex-client", "sphinxcontrib-httpdomain", "bump2version"]
+
+[[package]]
 name = "sphinx-thebe"
 version = "0.0.8"
 description = "Integrate interactive code blocks into your documentation with Thebe and Binder."
@@ -1636,7 +1651,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7d246330d35e7ea60a37bcd74fb751f34c6aadbff95bc506ab14b46904347a73"
+content-hash = "8d3924f57c1f87ff82967a9a0ae59977877e73a8b8b073d345bf963a883c9825"
 
 [metadata.files]
 alabaster = [
@@ -2265,6 +2280,10 @@ sphinx-copybutton = [
 sphinx-panels = [
     {file = "sphinx-panels-0.5.2.tar.gz", hash = "sha256:b7b3faa05f37b7318fd14cd85c4effa1ab905dfc8bed236a63978565ea461ae4"},
     {file = "sphinx_panels-0.5.2-py3-none-any.whl", hash = "sha256:2b2e18448b0494e7a232d6c7dfb9aa3982e7aeb92aeea7d1b146e34e9261d2f1"},
+]
+sphinx-rtd-theme = [
+    {file = "sphinx_rtd_theme-0.5.2-py2.py3-none-any.whl", hash = "sha256:4a05bdbe8b1446d77a01e20a23ebc6777c74f43237035e76be89699308987d6f"},
+    {file = "sphinx_rtd_theme-0.5.2.tar.gz", hash = "sha256:32bd3b5d13dc8186d7a42fc816a23d32e83a4827d7d9882948e7b837c232da5a"},
 ]
 sphinx-thebe = [
     {file = "sphinx-thebe-0.0.8.tar.gz", hash = "sha256:6229caa99e996776ffdc5c658d9dcce09e0c749727e5aa3d280a2bbf3a72068a"},
