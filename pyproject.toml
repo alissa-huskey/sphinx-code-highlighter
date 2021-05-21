@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-code-highlighter"
-version = "0.0.1.dev.1621579065"
+version = "0.0.1"
 description = "code-block-hl directive, just like code-block but with partial line highlights"
 authors = ["Alissa Huskey"]
 repository = "https://github.com/alissa-huskey/sphinx-code-highlighter"
