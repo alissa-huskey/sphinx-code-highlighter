@@ -1,8 +1,0 @@
-index
-=====
-
-.. toctree::
-   :glob:
-
-   *
-
