@@ -4,6 +4,7 @@ version = "0.0.1.dev.1621579065"
 description = "code-block-hl directive, just like code-block but with partial line highlights"
 authors = ["Alissa Huskey"]
 repository = "https://github.com/alissa-huskey/sphinx-code-highlighter"
+documentation = "https://alissa-huskey.github.io/sphinx-code-highlighter/"
 packages = [ { include = "code_highlighter" } ]
 license = "MIT"
 readme = "README.md"
