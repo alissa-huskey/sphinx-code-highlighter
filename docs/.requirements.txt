@@ -1,2 +1,2 @@
-jupyter-book
 sphinx-code-highlighter
+jupyter-book
