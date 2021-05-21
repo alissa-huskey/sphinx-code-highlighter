@@ -1,13 +1,5 @@
-Sphinx Code Highlighter Directive
-=================================
-
-A Sphinx directive that works just like a code-block plus allows you to
-highlight partial lines.
-
-Example
--------
-
-`````markdown
+MyST Markdown Demo
+==================
 
 ```{code-block-hl} python
 :linenos:
@@ -28,7 +20,3 @@ while i < len(!!!dwarves!!!):
   print(f"{name}s Room")
   i += 1
 ```
-
-`````
-
-![demo](docs/img/demo.png)
