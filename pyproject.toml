@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-code-highlighter"
-version = "0.0.1"
+version = "0.0.3"
 description = "code-block-hl directive, just like code-block but with partial line highlights"
 authors = ["Alissa Huskey"]
 repository = "https://github.com/alissa-huskey/sphinx-code-highlighter"
@@ -34,6 +34,7 @@ pylama = "^7.7.1"
 neovim = "^0.3.1"
 jupyter-book = "^0.10.2"
 sphinx-rtd-theme = "^0.5.2"
+click = "^8.0.1"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

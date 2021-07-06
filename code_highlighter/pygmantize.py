@@ -77,9 +77,13 @@ def make_lexer(lang: str=None, code: str=None, language_lexer: Lexer=None):
                Expects 4 match groups: marker, highlighted content, marker, rest of line
             """
 
-            # make a callback function that assigns Token.Marker to the markers and
-            # run everything else through the parent lexer
-            lex = bygroups(Token.Marker, using(parent), Token.Marker, using(parent))
+            # make a callback function that assigns Token.Marker to the markers, run the
+            # enclosed text through the parent lexer, then run the rest of the line back
+            # through this lexer
+            lex = bygroups(Token.Marker,
+                           using(parent),
+                           Token.Marker,
+                           using(lexer.__class__))
 
             # call it on the matches then iterate through the resulting tokens
             markers = 0

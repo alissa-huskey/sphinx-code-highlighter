@@ -21,7 +21,7 @@ def datadir(rootdir):
     return rootdir / "test-code"
 
 def test_lexer(datadir):
-    filepath = datadir / "dwarves.py"
+    filepath = datadir / "while-loop.py"
     code = filepath.read_text()
     lexer = make_lexer("python", code)
 
@@ -71,7 +71,6 @@ def test_highlighted_style():
     assert styles[token.Highlight] == f"{styles[token]} bg:{bgc}", \
         "Every token should have a .Highlight subtoken style with the highlight background color"
 
-
 def test_add_highlight():
     code = """print("!!!well hello!!!")"""
     klass = make_lexer("python", code)
@@ -92,3 +91,16 @@ def test_add_highlight():
 
     assert not any( [token == Token.Marker for pos, token, text in tokens]), \
         "Highlight markers (!!!) should be removed."
+
+@pytest.mark.parametrize("filename", [
+    "for-loop.py",
+    "while-loop.py",
+])
+def test_for_errors(datadir, filename):
+    filepath = datadir / filename
+    code = filepath.read_text()
+    lexer = make_lexer("python", code)
+    tokens = list(lex(code, lexer()))
+    errors = [ (i, tok, text) for i, (tok, text) in enumerate(tokens) if "Error" in str(tok) ]
+
+    assert not errors

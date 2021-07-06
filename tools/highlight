@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+
+"""Script to print syntax highlighted contents of file."""
+
+from pathlib import Path
+
+import click
+from pygments import highlight
+from pygments.formatters import TerminalTrueColorFormatter
+
+from code_highlighter.pygmantize import (
+    ArgumentError,
+    HighlightedStyle,
+    make_lexer
+)
+
+@click.command()
+@click.option("--lang", "-l",
+              default="python",
+              show_default=True,
+              metavar="LANG",
+              help="lexer language")
+@click.argument("filepath", type=click.File(), metavar="FILE")
+def main(lang, filepath):
+    """print contents of FILE syntax highlighted"""
+    code = filepath.read()
+    lexer = make_lexer("python", code)
+    ascii = highlight(
+        code,
+        lexer(),
+        TerminalTrueColorFormatter(style=HighlightedStyle)
+    )
+    print(ascii)
+
+if __name__ == "__main__":
+    main()
