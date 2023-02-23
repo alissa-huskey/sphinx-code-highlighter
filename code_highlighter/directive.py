@@ -79,7 +79,7 @@ def setup(app: "Sphinx") -> Dict[str, Any]:
         app.connect(DEBUG_EVENT, event_breakpoint)
 
     return {
-        'version': '0.1',
+        'version': '0.0.4',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sphinx-code-highlighter"
-version = "0.0.3"
+version = "0.0.4"
 description = "code-block-hl directive, just like code-block but with partial line highlights"
 authors = ["Alissa Huskey"]
 repository = "https://github.com/alissa-huskey/sphinx-code-highlighter"
@@ -24,17 +24,16 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Pygments = "^2.9.0"
-Sphinx = "^3"
+Pygments = "^2"
 
-[tool.poetry.dev-dependencies]
-ipython = "^7.23.1"
-pytest = "^6.2.4"
-pylama = "^7.7.1"
+[tool.poetry.group.dev.dependencies]
+jupyter-book = "^0.13.2"
+ipython = "*"
+pytest = "*"
+pylama = "*"
 neovim = "^0.3.1"
-jupyter-book = "^0.10.2"
-sphinx-rtd-theme = "^0.5.2"
-click = "^8.0.1"
+sphinx-rtd-theme = "*"
+click = "^8"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
